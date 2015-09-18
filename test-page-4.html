@@ -1,0 +1,59 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <main>
+    <section>
+      <header>
+        <h1>My articles, second page</h1>
+      </header>
+      <ul>
+        <li>
+          <article>
+            <header>
+              <h1><a href="#/intro">Introduction</a></h1>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1><a href="#/hello">Hello World</a></h1>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1><a href="#/test">Testing</a></h1>
+            </header>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <nav>
+        <a rel="next">next</a>
+      </nav>
+    </foter>
+  </main>
+
+  <script>
+    INSTALL_OPTIONS = {
+      next: 'a[rel="next"]',
+      container: 'body > main > section:first-child ul'
+    };
+
+    Eager = {
+      createElement: function() {
+        eagerAppEl = document.createElement('eager-app');
+        document.body.appendChild(eagerAppEl);
+        return eagerAppEl;
+      }
+    };
+  </script>
+  <script src="script.js"></script>
+</body>

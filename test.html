@@ -1,0 +1,57 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    main > section > ul > li {
+      margin: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <header>
+        <h1>My articles</h1>
+      </header>
+      <ul>
+        <li>
+          <article>
+            <header>
+              <h1><a href="#/article-1">Article 1</a></h1>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1><a href="#/article-2">Article 2</a></h1>
+            </header>
+          </article>
+        </li>
+        <li>
+          <article>
+            <header>
+              <h1><a href="#/article-3">Article 3</a></h1>
+            </header>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <nav>
+        <a href="test-page-2.html" rel="next">next</a>
+      </nav>
+    </foter>
+  </main>
+
+  <script>
+    INSTALL_OPTIONS = {
+      next: 'a[rel="next"]',
+      container: 'body > main > section:first-child ul'
+    };
+  </script>
+  <script src="jquery-2.1.4.js"></script>
+  <script src="script.js"></script>
+</body>

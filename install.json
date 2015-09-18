@@ -1,0 +1,30 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "script",
+        "src": "./jquery-2.1.4.js"
+      },
+      {
+        "type": "script",
+        "src": "./script.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "container": {
+        "title": "Container of the items",
+        "type": "object",
+        "format": "element",
+        "default": "main ul"
+      },
+      "next": {
+        "title": "Next page button",
+        "type": "object",
+        "format": "element",
+        "default": "a[rel=\"next\"]"
+      }
+    }
+  }
+}

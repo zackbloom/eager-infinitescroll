@@ -1,0 +1,30 @@
+{
+  "name": "eager-infinitescroll",
+  "version": "1.0.0",
+  "description": "Add infinite scroll to any paginated list of things.",
+  "main": "script.js",
+  "dependencies": {
+    "coffeeify": "^1.1.0",
+    "superagent": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiatjaf/eager-infinitescroll.git"
+  },
+  "keywords": [
+    "eager",
+    "eager-app",
+    "infinite",
+    "scroll"
+  ],
+  "author": "Giovanni T. Parra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fiatjaf/eager-infinitescroll/issues"
+  },
+  "homepage": "https://github.com/fiatjaf/eager-infinitescroll#readme"
+}
