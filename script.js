@@ -2,13 +2,10 @@
 var el, fetching, getNextURL, main, renderNext;
 
 renderNext = function(next, done) {
-  return $.get(next, function(err, res) {
+  return $.get(next, function(text) {
     var e, error, i, item, len, nextItems, tmp;
-    if (err) {
-      return console.log("Infinite scroll couldn't fetch next page from " + next + ":", err);
-    }
     tmp = document.createElement('html');
-    tmp.innerHTML = res.text;
+    tmp.innerHTML = text;
     try {
       nextItems = tmp.querySelector(INSTALL_OPTIONS.container).childNodes;
     } catch (error) {

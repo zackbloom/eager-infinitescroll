@@ -1,9 +1,7 @@
 renderNext = (next, done) ->
-  $.get next, (err, res) ->
-    return console.log "Infinite scroll couldn't fetch next page from #{next}:", err if err
-
+  $.get next, (text) ->
     tmp = document.createElement 'html'
-    tmp.innerHTML = res.text
+    tmp.innerHTML = text
 
     try
       nextItems = tmp.querySelector(INSTALL_OPTIONS.container).childNodes
