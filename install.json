@@ -1,13 +1,13 @@
 {
   "resources": {
-    "head": [
+    "body": [
       {
         "type": "script",
-        "src": "./jquery-2.1.4.js"
-      },
-      {
-        "type": "script",
-        "src": "./script.js"
+        "src": "./script.js",
+        "moduleType": "global",
+        "depends": {
+          "github.com/jquery/jquery:jquery.js": "jQuery"
+        }
       }
     ]
   },

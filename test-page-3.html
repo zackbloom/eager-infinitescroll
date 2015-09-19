@@ -41,19 +41,4 @@
     </foter>
   </main>
 
-  <script>
-    INSTALL_OPTIONS = {
-      next: 'a[rel="next"]',
-      container: 'body > main > section:first-child ul'
-    };
-
-    Eager = {
-      createElement: function() {
-        eagerAppEl = document.createElement('eager-app');
-        document.body.appendChild(eagerAppEl);
-        return eagerAppEl;
-      }
-    };
-  </script>
-  <script src="script.js"></script>
 </body>
