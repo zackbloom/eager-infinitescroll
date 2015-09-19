@@ -11,6 +11,9 @@
       }
     ]
   },
+  "dependencies": {
+    "github.com/jquery/jquery": ">= 1.7.0"
+  },
   "options": {
     "properties": {
       "container": {
