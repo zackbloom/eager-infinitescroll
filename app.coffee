@@ -1,7 +1,5 @@
-superagent = require 'superagent'
-
 renderNext = (next, done) ->
-  superagent.get(next).end (err, res) ->
+  $.get next, (err, res) ->
     return console.log "Infinite scroll couldn't fetch next page from #{next}:", err if err
 
     tmp = document.createElement 'html'
