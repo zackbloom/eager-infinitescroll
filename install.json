@@ -15,14 +15,14 @@
     "properties": {
       "container": {
         "title": "Container of the items",
-        "type": "object",
-        "format": "element",
+        "type": "string",
+        "format": "selector",
         "default": "main ul"
       },
       "next": {
         "title": "Next page button",
-        "type": "object",
-        "format": "element",
+        "type": "string",
+        "format": "selector",
         "default": "a[rel=\"next\"]"
       }
     }
