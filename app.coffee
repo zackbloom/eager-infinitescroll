@@ -1,7 +1,10 @@
 renderNext = (next, done) ->
-  $.get next, (text) ->
+  req = new XMLHttpRequest
+  req.open 'GET', next, true
+
+  req.onload = ->
     tmp = document.createElement 'html'
-    tmp.innerHTML = text
+    tmp.innerHTML = req.responseText
 
     try
       nextItems = tmp.querySelector(INSTALL_OPTIONS.container).childNodes
@@ -13,6 +16,8 @@ renderNext = (next, done) ->
 
     document.querySelector(INSTALL_OPTIONS.next).href = getNextURL tmp
     done()
+
+  req.send()
 
 getNextURL = (baseElement) ->
   try
@@ -31,8 +36,8 @@ fetching = false
 main = (e) ->
   return if fetching
 
-  noScrollBar = $("body").height() <= $(window).height()
-  scrolledDown = $(window).scrollTop() == $(document).height() - $(window).height()
+  noScrollBar = document.body.scrollHeight <= innerHeight
+  scrolledDown = document.body.scrollTop == document.body.scrollHeight - innerHeight
 
   if scrolledDown or noScrollBar
     fetching = true

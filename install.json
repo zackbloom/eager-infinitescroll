@@ -3,16 +3,9 @@
     "body": [
       {
         "type": "script",
-        "src": "./script.js",
-        "moduleType": "global",
-        "depends": {
-          "github.com/jquery/jquery:dist/jquery.js": "$"
-        }
+        "src": "./script.js"
       }
     ]
-  },
-  "dependencies": {
-    "github.com/jquery/jquery": "2.1.4"
   },
   "options": {
     "properties": {
