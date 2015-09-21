@@ -6,13 +6,13 @@
         "src": "./script.js",
         "moduleType": "global",
         "depends": {
-          "github.com/jquery/jquery:jquery.js": "jQuery"
+          "github.com/jquery/jquery:dist/jquery.js": "$"
         }
       }
     ]
   },
   "dependencies": {
-    "github.com/jquery/jquery": ">= 1.7.0"
+    "github.com/jquery/jquery": "2.1.4"
   },
   "options": {
     "properties": {
