@@ -47,12 +47,12 @@
   fetching = false;
 
   main = function(e) {
-    var noScrollBar, scrolledDown;
+    var noScrollBar, scrollHeight, scrollTop, scrolledDown;
     if (fetching) {
       return;
     }
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
     noScrollBar = scrollHeight <= innerHeight;
     scrolledDown = scrollTop === scrollHeight - innerHeight;
     if (scrolledDown || noScrollBar) {

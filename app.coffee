@@ -36,8 +36,11 @@ fetching = false
 main = (e) ->
   return if fetching
 
-  noScrollBar = document.body.scrollHeight <= innerHeight
-  scrolledDown = document.body.scrollTop == document.body.scrollHeight - innerHeight
+  scrollTop = document.documentElement.scrollTop or document.body.scrollTop
+  scrollHeight = document.documentElement.scrollHeight or document.body.scrollHeight
+
+  noScrollBar = scrollHeight <= innerHeight
+  scrolledDown = scrollTop == scrollHeight - innerHeight
 
   if scrolledDown or noScrollBar
     fetching = true
