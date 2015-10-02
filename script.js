@@ -51,8 +51,10 @@
     if (fetching) {
       return;
     }
-    noScrollBar = document.body.scrollHeight <= innerHeight;
-    scrolledDown = document.body.scrollTop === document.body.scrollHeight - innerHeight;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    noScrollBar = scrollHeight <= innerHeight;
+    scrolledDown = scrollTop === scrollHeight - innerHeight;
     if (scrolledDown || noScrollBar) {
       fetching = true;
       return renderNext(getNextURL(document), function() {
